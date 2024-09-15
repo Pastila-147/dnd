@@ -1,0 +1,113 @@
+.container-tasks {
+  font-family: Arial, sans-serif;
+  background-color: #31e1b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  min-height: 200px;
+}
+
+.container-task {
+  background-color: #cdedf2;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  min-height: 100px;
+  flex-grow: 1;
+  flex-basis: 0; 
+  flex-shrink: 1;
+  justify-content: space-between;
+}
+
+.tasks_header {
+  display: flex;
+  align-items: flex-start;
+  margin-right: 10px;
+}
+
+.tasks_header_text {
+  margin: 0px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.task_list {
+  flex-grow: 1;
+}
+
+.task_card {
+  position: static;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: azure;
+  margin: 10px 3px;
+  min-height: 50px;
+  cursor: grab;
+}
+
+.task_list .task_card.dragging {
+  z-index: 100;
+  position: absolute;
+  pointer-events: none;
+  cursor: grabbing;
+}
+
+.close_button_container {
+  position: relative;
+}
+
+.close_button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px;
+  display: none;
+}
+
+.task_card:hover .close_button {
+  display: block;
+  cursor: pointer;
+}
+
+.content_card {
+  padding: 5px;
+  font-size: 0.8em;
+}
+
+.content_card[contenteditable="true"]:hover {
+  cursor: text;
+}
+
+.adder_card {
+  font-size: 0.8em;
+  color: rgb(13, 102, 83);
+  cursor: pointer;
+  padding-top: 5px;
+  margin-top: auto; 
+}
+
+.adder_card:hover {
+  color: rgb(59, 193, 180);
+  text-decoration: underline;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  flex-direction: column;
+}
+
+.task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 100vh;
+}
